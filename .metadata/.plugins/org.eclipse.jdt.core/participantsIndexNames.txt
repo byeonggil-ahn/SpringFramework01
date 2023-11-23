@@ -1,0 +1,13 @@
+INDEX VERSION 1.131
+/Users/bg/Desktop/Web01/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3606710795.index
+/fd01/src/main/java
+/Users/bg/Desktop/Web01/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/962859048.index
+/fd01/src/main/java
+/Users/bg/Desktop/Web01/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3333088556.index
+/ex02/src/main/java
+/Users/bg/Desktop/Web01/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2189512632.index
+/ex02/src/main/java
+/Users/bg/Desktop/Web01/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2577116797.index
+/fd01/src/main/java
+/Users/bg/Desktop/Web01/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2312218099.index
+/ex02/src/main/java
