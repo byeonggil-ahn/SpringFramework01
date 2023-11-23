@@ -38,6 +38,7 @@ public class BoardController {
 //
 //	}
 	
+	
 	@GetMapping("/list")
 	public void list(Criteria cri,Model model) {
 
@@ -67,7 +68,7 @@ public class BoardController {
 	}
 
 	@GetMapping({"/get","/modify"})
-//	ModelAttribute한 이유는 Criteria타입이 자동으로 소문자로 바뀌기 때문에 cri이름으로 바꿧음 
+//	ModelAttribute한 이유는 Criteria타입이 자동으로 소문자로 바뀌기 때문에 cri이름으로 바꿨음 
 	public void get(@RequestParam("bno")Long bno,@ModelAttribute("cri") Criteria cri, Model model) {
 
 		model.addAttribute("board", service.get(bno));
