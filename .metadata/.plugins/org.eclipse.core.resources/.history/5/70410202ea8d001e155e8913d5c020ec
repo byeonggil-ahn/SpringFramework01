@@ -25,8 +25,7 @@
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-	<!-- MyBatis의 매퍼 인터페이스를 스캔하여 자동으로 빈으로 등록 .
-	 이를 통해 매퍼 인터페이스를 주입받아 MyBatis가 동작하게 함 .  -->
+	
 	<mybatis-spring:scan base-package="org.zerock.mapper"/>
 	
 	<!-- Spring에서 @Service, @Repository, @Component 어노테이션이 붙은 클래스를 스캔하여 자동으로 빈으로 등록   -->
