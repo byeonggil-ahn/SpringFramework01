@@ -8,8 +8,6 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	<!-- hikariConfig 빈 등록   -->
-	<!-- DB관련 설정 : DB 관련 정보를 커넥션 풀 객체에 담는 설정  -->
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
 		<property name="jdbcUrl" value="jdbc:log4jdbc:mysql://localhost:3306/book_ex?serverTimezone=Asia/Seoul" />
@@ -28,6 +26,5 @@
 	
 	<mybatis-spring:scan base-package="org.zerock.mapper"/>
 	
-	<!-- Spring에서 @Service, @Repository, @Component 어노테이션이 붙은 클래스를 스캔하여 자동으로 빈으로 등록   -->
 	<context:component-scan base-package="org.zerock.service"></context:component-scan>
 </beans>

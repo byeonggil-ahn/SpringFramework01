@@ -28,6 +28,5 @@
 	
 	<mybatis-spring:scan base-package="org.zerock.mapper"/>
 	
-	<!-- Spring에서 @Service, @Repository, @Component 어노테이션이 붙은 클래스를 스캔하여 자동으로 빈으로 등록   -->
 	<context:component-scan base-package="org.zerock.service"></context:component-scan>
 </beans>
