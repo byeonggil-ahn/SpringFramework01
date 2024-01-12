@@ -104,6 +104,17 @@ public class BoardMapperTests {
 		log.info(pageDTO);
 	}
 	
+	@Test
+	public void testSearch() {
+		Criteria cri = new Criteria();
+		cri.setKeyword("테스트setKeyword");
+		cri.setType("T");
+		
+		List<BoardVO> list = boardMapper.getListWithPaging(cri);
+		
+		list.forEach(board -> log.info(board));
+	}
+	
 	
 	
 	

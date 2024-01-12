@@ -1,0 +1,17 @@
+127.0.0.1 - - [07/Jan/2024:07:04:24 +0900] "GET / HTTP/1.1" 200 162
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/vendor/metisMenu/metisMenu.min.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/vendor/datatables-responsive/dataTables.responsive.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/vendor/datatables-plugins/dataTables.bootstrap.css HTTP/1.1" 200 7616
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/dist/css/sb-admin-2.css HTTP/1.1" 200 8420
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/vendor/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 29063
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /board/list HTTP/1.1" 200 26274
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/vendor/metisMenu/metisMenu.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/vendor/datatables/js/jquery.dataTables.min.js HTTP/1.1" 200 82638
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/vendor/datatables-responsive/dataTables.responsive.js HTTP/1.1" 200 25098
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/vendor/datatables-plugins/dataTables.bootstrap.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/dist/js/sb-admin-2.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:53 +0900] "GET /resources/vendor/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 71896
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:04:58 +0900] "GET / HTTP/1.1" 200 162
+0:0:0:0:0:0:0:1 - - [07/Jan/2024:07:05:05 +0900] "GET /board/list HTTP/1.1" 200 26274
