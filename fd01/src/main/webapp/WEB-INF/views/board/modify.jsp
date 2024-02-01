@@ -18,9 +18,14 @@
 			<div class="panel-heading">Board Modify/Delete</div>
 			<!-- /.panel-heading -->
 			<div class="panel-body">
-				<form>
-					<input type='hidden' name='pageNum' value='${cri.pageNum }'>
-					<input type='hidden' name='amoun' value='${cri.amount }'>
+				<form role="form" action="modify" method="post">
+						<input type="hidden" name="pageNum"
+						value="<c:out value="${cri.pageNum }"/>"> <input
+						type="hidden" name="amount"
+						value="<c:out value="${cri.amount }"/>"> <input
+						type="hidden" name="keyword"
+						value="<c:out value="${cri.keyword }"/>"> <input
+						type="hidden" name="type" value="<c:out value="${cri.type }"/>">
 					<div class="form-group">
 						<label>BNO</label> <input class="form-control" name="bno"
 							readonly="readonly" value='<c:out value="${board.bno}"/>'>
@@ -66,14 +71,29 @@
 
 		$('.btn').click(function(e) {
 
-		    e.preventDefault();
-	 /* data-지정값 속성에 적용되있는값 가져와서 변수에 넣기 */
+			e.preventDefault();
+			/* data-지정값 속성에 적용되있는값 가져와서 변수에 넣기 */
 			var operation = $(this).data("oper");
 
 			console.log(operation);
 
 			if (operation === 'list') {
-				self.location = "/board/list";
+				formObj.attr("action", "/board/list").attr("method", "get");
+				//modify.jsp에서다시 목록으로 돌아가는경우 필요한 파라미터 전송위한 로직 
+				var pageNumTag = $("input[name='pageNum']").clone();
+				var amountTag = $("input[name='amount']").clone();
+				var KeywordTag = $("input[name='keyword']").clone();
+				var typeTag = $("input[name='type']").clone();
+				
+				formObj.empty();
+				
+				formObj.append(pageNumTag);
+				formObj.append(amountTag);
+				formObj.append(KeywordTag);
+				formObj.append(typeTag);
+				
+				formObj.submit();
+
 			} else if (operation === 'remove') {
 				formObj.attr("action", "/board/remove").attr("method", "post");
 				formObj.submit();

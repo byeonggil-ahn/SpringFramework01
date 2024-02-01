@@ -75,7 +75,7 @@ public class BoardController {
 	}
 
 	@PostMapping("/modify")
-	public String modify(BoardVO board,Criteria cri, RedirectAttributes rttr) {
+	public String modify(BoardVO board,@ModelAttribute("cri") Criteria cri, RedirectAttributes rttr) {
 
 		int count = service.modify(board);
 		 log.info("modify 메서드 호출됨");
@@ -89,6 +89,8 @@ public class BoardController {
 		
 		rttr.addAttribute("pageNum",cri.getPageNum());
 		rttr.addAttribute("amount",cri.getAmount());
+		rttr.addAttribute("type",cri.getType());
+		rttr.addAttribute("keyword",cri.getKeyword());
 
 		return "redirect:/board/list";
 
@@ -108,6 +110,8 @@ public class BoardController {
 		
 		rttr.addAttribute("pageNum",cri.getPageNum());
 		rttr.addAttribute("amount",cri.getAmount());
+		rttr.addAttribute("type",cri.getType());
+		rttr.addAttribute("keyword",cri.getKeyword());
 		
 		return "redirect:/board/list";
 
