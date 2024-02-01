@@ -20,13 +20,19 @@ public class Criteria {
 	}
 
 	public Criteria(int pageNum, int amount) {
-		super();
 		this.pageNum = pageNum;
 		this.amount = amount;
 	}
+	
+    public int getStartRow() {
+        return (pageNum - 1) * amount;
+    }
 
 	public String[] getTypeArr() {
 		
+//	빈 배열을 foreach로 반환해주거나 문자열을 분리하여 배열로 만들어서 foreach로 반
 		return type == null? new String[] {}: type.split("");
 	}
+	
+	
 }
