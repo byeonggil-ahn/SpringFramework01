@@ -54,8 +54,8 @@
 					<div class="col-lg-12">
 						<form id="searchForm" action="/board/list" method="get">
 							<select name="type">
-							
-							<!--그냥 el 태그만 사용할 수도있지만, c:out 태그를 열고 안에 value 속성을 이용하여
+
+								<!--그냥 el 태그만 사용할 수도있지만, c:out 태그를 열고 안에 value 속성을 이용하여
 								표현하면 보안상의 이슈에서 더 유리하다고 한다.  -->
 								<option value=""
 									<c:out value="${pageMaker.cri.type == null ? 'selected':'' }"/>>--</option>
@@ -116,12 +116,11 @@
 				감싸지 않아도 된다 . -->
 				<form id='actionForm' action="/board/list" method="get">
 					<input type="hidden" name="pageNum"
-						value="${pageMaker.cri.pageNum }">
-					<input type="hidden" name="amount" 
-						value="${pageMaker.cri.amount }">
-					<input type="hidden" name="type"
-						value="<c:out value="${pageMaker.cri.type }"/>">	
-					<input type="hidden" name="keyword"
+						value="${pageMaker.cri.pageNum }"> <input type="hidden"
+						name="amount" value="${pageMaker.cri.amount }"> <input
+						type="hidden" name="type"
+						value="<c:out value="${pageMaker.cri.type }"/>"> <input
+						type="hidden" name="keyword"
 						value="<c:out value="${pageMaker.cri.keyword }"/>">
 				</form>
 			</div>
@@ -162,7 +161,6 @@
 					function() {
 
 						var result = '<c:out value="${result}"/>';
-
 						checkModal(result);
 
 						/* 뒤로가기 모달창 버그 해결위한 history 객체사용 */
@@ -226,34 +224,35 @@
 													"/board/get").submit();
 
 										});
+						
+
 					});
 
 	/* 검색 버튼의 이벤트 처리 로직  */
 	var searchForm = $("#searchForm");
 	$("#searchForm button").on("click", function(e) {
-	    // 검색 종류 선택 여부 확인
-	    if (!searchForm.find("select[name='type'] option:selected").val()) {
-	        alert("검색 종류를 선택하세요.");
+		// 검색 종류 선택 여부 확인
+		if (!searchForm.find("select[name='type'] option:selected").val()) {
+			alert("검색 종류를 선택하세요.");
 
-	        return false;
-	    }
+			return false;
+		}
 
-	    // 키워드 입력 여부 확인
-	    if (!searchForm.find("input[name='keyword']").val()) {
-	        alert("키워드를 입력하세요.");
+		// 키워드 입력 여부 확인
+		if (!searchForm.find("input[name='keyword']").val()) {
+			alert("키워드를 입력하세요.");
 
-	        return false;
-	    }
+			return false;
+		}
 
-	    // 페이지 번호 초기화
-	    searchForm.find("input[name='pageNum']").val("1");
+		// 페이지 번호 초기화
+		searchForm.find("input[name='pageNum']").val("1");
 
-	    e.preventDefault();
+		e.preventDefault();
 
-	    // 폼 제출
-	    searchForm.submit();
+		// 폼 제출
+		searchForm.submit();
 	});
-
 </script>
 
 <%@include file="../includes/footer.jsp"%>

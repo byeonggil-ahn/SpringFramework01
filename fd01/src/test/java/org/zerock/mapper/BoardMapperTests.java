@@ -116,6 +116,20 @@ public class BoardMapperTests {
 	}
 	
 	
+	@Test
+	public void testlistLink()	{
+	     Criteria criteria = new Criteria();
+	        criteria.setPageNum(1);
+	        criteria.setAmount(10);
+	        criteria.setType("exampleType");
+	        criteria.setKeyword("exampleKeyword");
+
+	        String listLink = criteria.getListLink();
+
+	        System.out.println("Generated List Link: " + listLink);
+	}
+	
+	
 	
 	
 	

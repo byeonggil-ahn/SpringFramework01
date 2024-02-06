@@ -4,4 +4,5 @@
     <fullyQualifiedTypeName name="org.zerock.domain.Criteria"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
+    <fullyQualifiedTypeName name="org.springframework.web.util.UriComponentsBuilder"/>
 </qualifiedTypeNameHistroy>

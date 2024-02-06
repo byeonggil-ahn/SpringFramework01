@@ -102,6 +102,18 @@
 				formObj.submit();
 			}
 		})
+
+	    
+		$(window).on('pageshow', function(event) {
+		    if (event.originalEvent.persisted || window.performance.navigation.type == 2) {
+/*	window.performance.navigation.type == 2 는 크롬에서 뒤로가기를 의미,
+ * event.originalEvent.persisted는 크롬을 제외한 브라우저에 bf캐시여부 확인 
+ */
+		        console.log(event.originalEvent.persisted);
+		        window.location.reload();
+		    }
+		});
+
 	})
 </script>
 
