@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.ReplyMapper">
+
+	<insert id="insert">
+		insert into tbl_reply (bno, reply, replyer)
+		values
+		(#{bno}, #{reply}, #{replyer})
+	</insert>
+
+	<select id="read" resultType="org.zerock.domain.ReplyVO">
+		select*from tbl_reply where rno
+		=#{rno}
+	</select>
+
+	<delete id="delete">
+		delete from tbl_reply where rno = #{rno}
+	</delete>
+
+	<update id="update">
+		update tbl_reply set reply = #{reply}, updatedate = NOW() where rno = #{rno}
+	</update>
+
+<!--  boardmapper에서한것처럼 LIMIT 에 startRow 랑amount 가져오려했는데,
+이번엔 bno 변수까지 같이있어서 cri로 명확히 지명을 안해줘서 오류가 계속 발생했던 문제가 있었음    -->
+	 <select id="getListWithPaging" resultType="org.zerock.domain.ReplyVO">
+    <![CDATA[
+    SELECT rno, bno, reply, replyer, replyDate, updateDate
+    FROM tbl_reply
+    WHERE bno = #{bno}
+      AND rno > 0
+    ORDER BY rno ASC
+    ]]>
+	</select>
+
+	<select id="getCountByBno" resultType="int">
+	<![CDATA[
+	select count(rno) from tbl_reply where bno = #{bno}
+	]]>
+	</select>
+
+</mapper>
